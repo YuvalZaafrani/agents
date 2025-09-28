@@ -1,0 +1,8 @@
+My name is Yuval Zaafrani, an **Automation QA Engineer and a B.Sc. Computer Science & Entrepreneurship student at Reichman University.**
+Based in Tel Aviv, I am passionate about technology, innovation, and creating real impact by bridging technical expertise with entrepreneurial vision.  
+In my current role at Nayax, I develop and maintain automation frameworks, leveraging Python, API testing, and CI/CD to deliver high-quality,
+reliable software solutions. My academic journey further strengthens my foundation in computer science, data structures, operating systems,
+and machine learning, while also cultivating business acumen in product management, venture capital, and digital marketing.  
+Beyond the tech and entrepreneurial world, I draw inspiration from creativity. 
+I enjoy exploring new cuisines and experimenting in the kitchen, where I blend precision with innovation. Music and sports also play a key role in my life – I love playing the piano and staying active as ways to recharge and stay balanced.  
+I am driven by curiosity, creativity, and a desire to contribute to meaningful projects that connect technology and people.
