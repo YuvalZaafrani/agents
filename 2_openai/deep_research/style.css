@@ -1,0 +1,125 @@
+/* ---- Layout & base ---- */
+.gradio-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 24px 3vw;
+    box-sizing: border-box;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  }
+  
+  /* Pleasant dark gradient background */
+  body {
+    background: radial-gradient(1200px 800px at 20% 0%, #0f172a 0%, #0a1426 45%, #081120 100%) fixed;
+    color: #e5e7eb;
+  }
+  
+  /* ---- Headings ---- */
+  .gradio-container h1 {
+    text-align: center;            
+    font-weight: 800;
+    letter-spacing: .25px;
+    margin-top: 6px;
+  }
+  
+  /* ---- Cards ---- */
+  .section-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
+  
+  /* ---- Query textbox (center label & placeholder) ---- */
+  #query_box label {
+    display: block;
+    text-align: center;            
+    font-weight: 700;              
+    font-size: 1.06rem;
+  }
+  
+  #query_box textarea,
+  #query_box input {
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.03);
+  }
+  
+  #query_box textarea::placeholder,
+  #query_box input::placeholder {
+    text-align: center;             
+    font-weight: 600;              
+    opacity: .75;
+  }
+  
+  /* ---- Buttons ---- */
+  .gr-button {
+    height: 48px;
+    font-weight: 700;
+    border-radius: 12px;
+    border: none;
+    transition: transform .05s ease, box-shadow .2s ease, filter .2s ease;
+    width: 100%; 
+  }
+  
+  /* Style for all primary buttons (Run) */
+  .gr-button-primary {
+    background: linear-gradient(135deg, #14b8a6 0%, #3b82f6 100%);  
+    color: #fff;
+    box-shadow: 0 10px 22px rgba(30, 144, 255, 0.25);
+  }
+  .gr-button-primary:hover { filter: brightness(1.06); }
+  .gr-button-primary:active { transform: translateY(1px); }
+  
+  /* Secondary buttons (Send/Skip) */
+  button:not(.gr-button-primary).gr-button {
+    background: rgba(255,255,255,0.06);
+    color: #e5e7eb;
+  }
+  button:not(.gr-button-primary).gr-button:hover {
+    background: rgba(255,255,255,0.1);
+  }
+  
+  /* ---- Markdown blocks ---- */
+  .gr-markdown {
+    line-height: 1.6;
+  }
+  .gr-markdown h2, .gr-markdown h3 {
+    margin-top: 1.2em;
+  }
+  .gr-markdown a {
+    color: #7dd3fc;                 /* קישורים בצבע תואם */
+    text-decoration: underline;
+  }
+  
+  /* ---- Accordion header ---- */
+  .gr-accordion .label-wrap {
+    font-weight: 700;
+  }
+  
+  /* ---- Email row styling if visible ---- */
+  #email_row .gr-textbox,
+  #email_row .gr-textbox textarea,
+  #email_row .gr-textbox input {
+    background: rgba(125, 211, 252, 0.12) !important;   
+    border: 1px solid rgba(125, 211, 252, 0.45) !important;
+    border-radius: 10px;
+  }
+
+  /* Buttons pressed/disabled feedback */
+.gr-button:disabled {
+    filter: grayscale(.2) brightness(.9);
+    opacity: .85;
+  }
+  
+  /* Small message above email controls */
+  #email_status {
+    margin-top: 6px;
+    margin-bottom: 8px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: rgba(125, 211, 252, 0.10);
+    border: 1px solid rgba(125, 211, 252, 0.30);
+  }
+  

@@ -1,0 +1,6 @@
+gradio==5.47.0
+python-dotenv==1.1.1
+openai==1.109.1
+openai-agents==0.3.2
+sendgrid==6.12.5
+pydantic==2.11.10

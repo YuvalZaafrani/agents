@@ -1,0 +1,69 @@
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759348110.6275096, "meta": {"which_agent": "agent1"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759348110.6302774, "meta": {"which_agent": "agent2"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759348110.6302774, "meta": {"which_agent": "agent3"}}
+{"stage": "selected", "prospect_id": "p1", "ts": 1759348142.3696053, "meta": {"info": "agent1"}}
+{"stage": "handed_off", "prospect_id": "p1", "ts": 1759348142.3696053}
+
+{"stage": "sent", "prospect_id": "p1", "ts": 1759348178.5457458, "meta": {"subject": "Unlock Growth with Nayax: Seamless Cashless Solutions & Management Tools!", "to_email": "zayuvalza@gmail.com"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759349003.5202818, "meta": {"which_agent": "Agent 1"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759349003.5222828, "meta": {"which_agent": "Agent 2"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759349003.523791, "meta": {"which_agent": "Agent 3"}}
+{"stage": "selected", "prospect_id": "p1", "ts": 1759349025.6462564, "meta": {"chosen_agent": "Agent 1"}}
+{"stage": "handed_off", "prospect_id": "p1", "ts": 1759349027.049998}
+
+{"stage": "sent", "prospect_id": "p1", "ts": 1759349077.8881946, "meta": {"subject": "Unlock Global Growth: Seamless Cashless Solutions & Engagement Tools", "to_email": "zayuvalza@gmail.com"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759349310.30646, "meta": {"which_agent": "agent1"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759349310.3084712, "meta": {"which_agent": "agent2"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759349310.3084712, "meta": {"which_agent": "agent3"}}
+{"stage": "selected", "prospect_id": "p1", "ts": 1759349335.6004152, "meta": {"chosen_agent": "agent2"}}
+{"stage": "handed_off", "prospect_id": "p1", "ts": 1759349335.6004152}
+{"stage": "sent", "prospect_id": "p1", "ts": 1759349394.7545507, "meta": {"subject": "Unlock Revenue Growth with Nayax's Cashless Solutions!", "to_email": "zayuvalza@gmail.com"}}
+
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759395002.5006297, "meta": {"info": "agent1"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759395002.5006297, "meta": {"info": "agent2"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759395002.5109828, "meta": {"info": "agent3"}}
+{"stage": "selected", "prospect_id": "p1", "ts": 1759395025.0316167, "meta": {"info": "agent2"}}
+{"stage": "handed_off", "prospect_id": "p1", "ts": 1759395027.076704}
+{"stage": "sent", "prospect_id": "p1", "ts": 1759395073.5539143, "meta": {"subject": "Unlock Cashless Wonderland with Nayax!", "to_email": "zayuvalza@gmail.com"}}
+
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759396608.9088511, "meta": {"info": "agent1"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759396608.913895, "meta": {"info": "agent2"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759396608.915901, "meta": {"info": "agent3"}}
+{"stage": "selected", "prospect_id": "p1", "ts": 1759396630.1003134, "meta": {"info": "agent1"}}
+{"stage": "handed_off", "prospect_id": "p1", "ts": 1759396630.1003134}
+{"stage": "sent", "prospect_id": "p1", "ts": 1759396672.1140218, "meta": {"subject": "Unlock Global Revenue: Elevate Your Business with Nayax's Cashless Solutions!", "to_email": "zayuvalza@gmail.com"}}
+
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759397846.529401, "meta": {"info": "agent1"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759397846.529401, "meta": {"info": "agent2"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759397846.5314074, "meta": {"info": "agent3"}}
+{"stage": "selected", "prospect_id": "p1", "ts": 1759397870.4482148, "meta": {"info": "agent2"}}
+{"stage": "handed_off", "prospect_id": "p1", "ts": 1759397870.4482148}
+{"stage": "sent", "prospect_id": "p1", "ts": 1759397909.12978, "meta": {"subject": "Boost Your Revenue with Global Cashless Solutions and Smart Engagement Tools!", "to_email": "zayuvalza@gmail.com"}}
+
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759398325.7095807, "meta": {"info": "agent1"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759398325.7095807, "meta": {"info": "agent2"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759398325.7095807, "meta": {"info": "agent3"}}
+{"stage": "selected", "prospect_id": "p1", "ts": 1759398345.7494078, "meta": {"info": "agent2"}}
+{"stage": "handed_off", "prospect_id": "p1", "ts": 1759398345.7494078}
+{"stage": "sent", "prospect_id": "p1", "ts": 1759398385.1331446, "meta": {"subject": "🚀 Let’s Take Cashless Payments to New Heights!", "to_email": "zayuvalza@gmail.com"}}
+
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759398799.0535622, "meta": {"which_agent": "agent1"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759398799.0535622, "meta": {"which_agent": "agent2"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759398799.0535622, "meta": {"which_agent": "agent3"}}
+{"stage": "selected", "prospect_id": "p1", "ts": 1759398820.2675114, "meta": {"chosen_agent": "agent2"}}
+{"stage": "handed_off", "prospect_id": "p1", "ts": 1759398820.2675114}
+{"stage": "sent", "prospect_id": "p1", "ts": 1759398855.3633633, "meta": {"subject": "Unlock Global Cashless Engagement & Drive Your Business Forward with Nayax", "to_email": "zayuvalza@gmail.com"}}
+
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759399018.3996503, "meta": {"info": "agent1"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759399018.3996503, "meta": {"info": "agent2"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759399018.3996503, "meta": {"info": "agent3"}}
+{"stage": "selected", "prospect_id": "p1", "ts": 1759399035.5729718, "meta": {"info": "agent3"}}
+{"stage": "handed_off", "prospect_id": "p1", "ts": 1759399036.915357}
+{"stage": "sent", "prospect_id": "p1", "ts": 1759399072.61867, "meta": {"subject": "Unlock Seamless Operations & Customer Engagement with Nayax's Cashless Solutions!", "to_email": "lidankatzav5@gmail.com"}}
+
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759399210.698816, "meta": {"info": "agent1"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759399210.7008235, "meta": {"info": "agent2"}}
+{"stage": "drafted", "prospect_id": "p1", "ts": 1759399210.7008235, "meta": {"info": "agent3"}}
+{"stage": "selected", "prospect_id": "p1", "ts": 1759399235.0332322, "meta": {"info": "agent2"}}
+{"stage": "handed_off", "prospect_id": "p1", "ts": 1759399235.0332322}
+{"stage": "sent", "prospect_id": "p1", "ts": 1759399294.8089492, "meta": {"subject": "Transform Your Transactions: Boost Engagement & Revenue with Nayax!", "to_email": "lidankatzav5@gmail.com"}}
