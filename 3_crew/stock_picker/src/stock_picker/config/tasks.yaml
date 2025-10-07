@@ -1,3 +1,8 @@
+# The tasks "find_trending_companies" and "research_trending_companies" save their output in JSON type files because:
+# 1. They use output_pydantic in the crew.py file and must return JSON that conforms to the schema (BaseModel).
+# 2. The system operates in a hierarchical mode (Process.hierarchical)
+#    and therefore requires structured output that is easy to pass and interpret between agents.
+
 find_trending_companies:
   description: >
     Find the top trending companies in the news in {sector} by searching the latest news. Find new companies that you've not found before.
@@ -16,9 +21,11 @@ research_trending_companies:
     - find_trending_companies
   output_file: output/research_report.json
 
+# the task pick_best_company mentions in the description
+# "Send a push notification to the user" - so it should use the tool "push_tool" that we add  
 pick_best_company:
   description: >
-    Analyze the research findings and pick the best company for investment.
+    Analyze the research findings and pick the best company for investment. 
     Send a push notification to the user with the decision and 1 sentence rationale.
     Then respond with a detailed report on why you chose this company, and which companies were not selected.
   expected_output: >

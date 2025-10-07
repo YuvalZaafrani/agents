@@ -2,7 +2,6 @@
 import sys
 import warnings
 import os
-from datetime import datetime
 
 from stock_picker.crew import StockPicker
 
@@ -15,7 +14,6 @@ def run():
     """
     inputs = {
         'sector': 'Technology',
-        "current_date": str(datetime.now())
     }
 
     # Create and run the crew

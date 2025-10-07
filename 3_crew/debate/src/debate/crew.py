@@ -6,42 +6,28 @@ from crewai.project import CrewBase, agent, crew, task
 class Debate():
     """Debate crew"""
 
-
     agents_config = 'config/agents.yaml'
     tasks_config = 'config/tasks.yaml'
 
     @agent
     def debater(self) -> Agent:
-        return Agent(
-            config=self.agents_config['debater'],
-            verbose=True
-        )
+        return Agent(config=self.agents_config['debater'], verbose=True) # verbose=True means- show verbose logs at runtime.
 
     @agent
     def judge(self) -> Agent:
-        return Agent(
-            config=self.agents_config['judge'],
-            verbose=True
-        )
+        return Agent(config=self.agents_config['judge'], verbose=True)
 
     @task
     def propose(self) -> Task:
-        return Task(
-            config=self.tasks_config['propose'],
-        )
+        return Task(config=self.tasks_config['propose'])
 
     @task
     def oppose(self) -> Task:
-        return Task(
-            config=self.tasks_config['oppose'],
-        )
+        return Task(config=self.tasks_config['oppose'])
 
     @task
     def decide(self) -> Task:
-        return Task(
-            config=self.tasks_config['decide'],
-        )
-
+        return Task(config=self.tasks_config['decide'])
 
     @crew
     def crew(self) -> Crew:

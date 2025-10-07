@@ -1,4 +1,3 @@
-# src/research_crew/config/tasks.yaml
 research_task:
   description: >
     Conduct thorough research on company {company}. Focus on:
@@ -29,6 +28,7 @@ analysis_task:
     findings with added analysis and insights. The report should be well-structured
     with an executive summary, main sections, and conclusion.
   agent: analyst
+# The output from the research task is included as part of the analysis task by context.
   context:
     - research_task
   output_file: output/report.md

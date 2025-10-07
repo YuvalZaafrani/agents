@@ -51,7 +51,9 @@ class StockPicker():
     def stock_picker(self) -> Agent:
         return Agent(config=self.agents_config['stock_picker'], 
                      tools=[PushNotificationTool()], memory=True)
-    
+
+    # "output_pydantic=TrendingCompanyList" means that the task will return a list of TrendingCompany objects
+    # and needs to output a JSON in the schema that conforms to trending company list (TrendingCompany).
     @task
     def find_trending_companies(self) -> Task:
         return Task(
@@ -72,13 +74,15 @@ class StockPicker():
             config=self.tasks_config['pick_best_company'],
         )
     
-
-
-
     @crew
     def crew(self) -> Crew:
         """Creates the StockPicker crew"""
-
+    # The manager agent acts as a coordinator for the crew rather than a worker.
+    # It’s created separately (not part of self.agents) because it doesn’t perform tasks directly -
+    # it decides which agent should handle each task and delegates work accordingly.
+    # The flag `allow_delegation=True` enables this agent to assign or "hand off" tasks
+    # to other agents, similar to the handoff mechanism in the OpenAI Agents SDK,
+    # when one agent can delegate a task to another agent according to their understanding.
         manager = Agent(
             config=self.agents_config['manager'],
             allow_delegation=True
@@ -109,7 +113,8 @@ class StockPicker():
                         type="short_term",
                         path="./memory/"
                     )
-                ),            # Entity memory for tracking key information about entities
+                ),            
+            # Entity memory for tracking key information about entities
             entity_memory = EntityMemory(
                 storage=RAGStorage(
                     embedder_config={
