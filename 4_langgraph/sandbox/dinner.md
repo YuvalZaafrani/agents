@@ -1,24 +1,32 @@
-# Dinner Report: Le Bernardin
+# Villa Mare TLV
 
-## Restaurant Overview
-- **Name**: Le Bernardin
-- **Address**: 155 W 51st St, New York, NY 10019
-- **Phone**: (212) 554-1515
-- **Website**: [le-bernardin.com](http://le-bernardin.com)
+- **Address:** 106 Hayarkon & Frishman St., Tel Aviv
+- **Phone:** 03-5246837
+- **Rating:** 4.6 (226 reviews)
 
-## Cuisine
-Le Bernardin specializes in refined seafood dishes, crafted with the utmost respect for the ingredients. The menu includes a variety of seafood preparations, with an emphasis on freshness and simplicity.
+## Description
+Villa Mare offers a menu filled with classic Italian dishes alongside specialties from Southern Italy, all in a warm and inviting atmosphere.
 
 ## Menu Highlights
-- **Tuna Tartare**: Diced raw tuna, served with toasted sesame and avocado.
-- **Wild Salmon**: Lightly cooked, served with a warm ginger-soy emulsion and bok choy.
-- **Poached Lobster**: Accompanied by truffle butter and a delicate sauce.
-- **Chocolate Soufflé**: A classic dessert, rich and airy.
+- **Seafood Bisque** - shrimp
+- **Seared Octopus**
+- **Grilled Shell**
+- **Shrimp Marinière**
+- **Shrimp Dor Blue** - Fresh shrimp in a creamy blue cheese sauce
+- **Mediterranean Shrimp & Calamari**
+- **Seafood Mix**
+- **Seafood Paella**
+- **Seafood Risotto** - White wine, fish stock, parsley, garlic, butter, and parmesan (₪88.00)
+- **Black Linguine with Seafood** - mussels, calamari, shrimp, bisque sauce (price not specified)
 
-## Ambiance
-The atmosphere at Le Bernardin is elegant and serene, characterized by minimalist decor and a focus on the dining experience.
+### Breakfast Options (served with small salad and juice)
+- **Basil Breeze**
+- **Tropical Delight**
+- **Aperol Spritz**
+- **Orange Sunset**
+- **Mimosa**
+- **Kir Royal**
+- **Cold Sangria** 
 
-## Summary of Reviews
-Le Bernardin has consistently received rave reviews for its exceptional cuisine and impeccable service. It is a three-Michelin star restaurant, recognized as one of the best seafood restaurants not only in New York but also in the world. Diners emphasize the harmonious flavors and the artistry of the dishes, making it a top choice for special occasions.
-
-**In conclusion**, Le Bernardin represents the pinnacle of fine dining, offering diners an unforgettable experience centered around seafood excellence.
+## Recommendations
+For a detailed menu or specific reviews, I recommend visiting their official website or a restaurant review platform like Yelp or TripAdvisor for the latest feedback and offerings.

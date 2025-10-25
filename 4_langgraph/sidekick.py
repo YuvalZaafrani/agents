@@ -16,7 +16,8 @@ from datetime import datetime
 
 load_dotenv(override=True)
 
-
+# Defines the state schema shared across all graph nodes (worker, tools, evaluator).
+# Each node reads and returns a modified copy of this state, ensuring a pure functional data flow.
 class State(TypedDict):
     messages: Annotated[List[Any], add_messages]
     success_criteria: str
@@ -24,7 +25,8 @@ class State(TypedDict):
     success_criteria_met: bool
     user_input_needed: bool
 
-
+# Structured output model for the Evaluator node.
+# Enforces explicit fields (feedback, success_criteria_met, user_input_needed) to ensure consistent downstream parsing.
 class EvaluatorOutput(BaseModel):
     feedback: str = Field(description="Feedback on the assistant's response")
     success_criteria_met: bool = Field(description="Whether the success criteria have been met")
@@ -32,8 +34,11 @@ class EvaluatorOutput(BaseModel):
         description="True if more input is needed from the user, or clarifications, or the assistant is stuck"
     )
 
-
+# Core Sidekick class implementing the multi-step workflow logic.
+# Manages LLM-powered tool calls, state persistence, and evaluation feedback loops.
 class Sidekick:
+    # Constructor initializes Sidekick-level attributes and placeholders.
+    # Generates a unique Sidekick session ID (UUID) and sets up a memory checkpointer for conversation persistence.
     def __init__(self):
         self.worker_llm_with_tools = None
         self.evaluator_llm_with_output = None
@@ -44,7 +49,11 @@ class Sidekick:
         self.memory = MemorySaver()
         self.browser = None
         self.playwright = None
-
+    # Asynchronous initialization routine.
+    # - Loads Playwright tools and other custom tools.
+    # - Binds the worker LLM with tool access and evaluator LLM with structured output.
+    # - Builds the LangGraph pipeline.
+    # Note: must be awaited before invoking any graph-related operations.
     async def setup(self):
         self.tools, self.browser, self.playwright = await playwright_tools()
         self.tools += await other_tools()
@@ -54,6 +63,12 @@ class Sidekick:
         self.evaluator_llm_with_output = evaluator_llm.with_structured_output(EvaluatorOutput)
         await self.build_graph()
 
+    # Core worker node: executes the primary reasoning cycle.
+    # - Composes a dynamic system message embedding current datetime and success criteria.
+    # - Integrates prior evaluator feedback if present.
+    # - Invokes the bound LLM (with tools) to produce the next assistant message.
+    # Returns an updated state containing the new message.
+    # Note: Iterative prompt tuning here heavily influences agent behavior and stability.
     def worker(self, state: State) -> Dict[str, Any]:
         system_message = f"""You are a helpful assistant that can use tools to complete tasks.
     You keep working on a task until either you have a question or clarification for the user, or the success criteria is met.
@@ -98,6 +113,9 @@ class Sidekick:
             "messages": [response],
         }
 
+    # Routing logic deciding the next graph node.
+    # If the last LLM message includes tool calls → route to 'tools' node.
+    # Otherwise → proceed to 'evaluator' node for assessment.
     def worker_router(self, state: State) -> str:
         last_message = state["messages"][-1]
 
@@ -105,7 +123,9 @@ class Sidekick:
             return "tools"
         else:
             return "evaluator"
-
+    
+    # Helper function to convert the internal message list into a human-readable dialogue transcript.
+    # Used primarily by the evaluator node for contextual judgment.
     def format_conversation(self, messages: List[Any]) -> str:
         conversation = "Conversation history:\n\n"
         for message in messages:
@@ -116,6 +136,10 @@ class Sidekick:
                 conversation += f"Assistant: {text}\n"
         return conversation
 
+    # Evaluator node assessing the worker's last response.
+    # - Compares the assistant output against the defined success criteria.
+    # - Returns structured feedback and boolean flags.
+    # - Designed to act as a "QA manager" validating work quality.
     def evaluator(self, state: State) -> State:
         last_response = state["messages"][-1].content
 
@@ -164,12 +188,19 @@ class Sidekick:
         }
         return new_state
 
+    # Conditional routing after evaluation:
+    # - If success criteria are met or user input is needed → terminate the graph.
+    # - Otherwise → loop back to the worker for another improvement cycle.
     def route_based_on_evaluation(self, state: State) -> str:
         if state["success_criteria_met"] or state["user_input_needed"]:
             return "END"
         else:
             return "worker"
 
+    # Builds the LangGraph state machine.
+    # - Defines nodes (worker, tools, evaluator) and conditional edges.
+    # - Compiles the graph with memory-based checkpointing for resumable runs.
+    # This function represents the declarative topology of the Sidekick workflow.
     async def build_graph(self):
         # Set up Graph Builder with State
         graph_builder = StateGraph(State)
@@ -192,6 +223,11 @@ class Sidekick:
         # Compile the graph
         self.graph = graph_builder.compile(checkpointer=self.memory)
 
+    # Executes one complete iteration ("super step") of the Sidekick pipeline.
+    # - Constructs the initial state (messages + criteria).
+    # - Invokes the compiled graph asynchronously.
+    # - Extracts assistant reply and evaluator feedback to append to chat history.
+    # Returns the updated chat transcript for UI rendering.
     async def run_superstep(self, message, success_criteria, history):
         config = {"configurable": {"thread_id": self.sidekick_id}}
 
@@ -208,6 +244,9 @@ class Sidekick:
         feedback = {"role": "assistant", "content": result["messages"][-1].content}
         return history + [user, reply, feedback]
 
+    # Graceful resource cleanup routine.
+    # Ensures that spawned Playwright browser instances and event loops are properly closed.
+    # Important to prevent dangling Chromium processes between Sidekick sessions.
     def cleanup(self):
         if self.browser:
             try:
